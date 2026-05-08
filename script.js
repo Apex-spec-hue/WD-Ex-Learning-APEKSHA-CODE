@@ -1,6 +1,4 @@
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
 
     // ---- 1. NAVBAR scroll effect ----
     window.addEventListener("scroll", function () {
