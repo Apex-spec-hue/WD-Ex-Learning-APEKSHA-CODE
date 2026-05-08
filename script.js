@@ -1,4 +1,8 @@
-  // ---- 1. NAVBAR scroll effect ----
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    // ---- 1. NAVBAR scroll effect ----
     window.addEventListener("scroll", function () {
       var nav = document.getElementById("tsNav");
       if (nav) {
@@ -196,4 +200,71 @@
       var tc = localStorage.getItem("tsTCAccepted");
       var cb = document.getElementById("agreeTC");
       if (tc === "yes" && cb) cb.checked = true;
+    });
+
+
+    // ---- iTunes Search API ----
+    function fetchSongs() {
+      var query = document.getElementById("apiSearchInput").value.trim();
+      if (!query) { query = "Taylor Swift"; }
+
+      var grid    = document.getElementById("apiSongsGrid");
+      var loading = document.getElementById("apiLoading");
+      var error   = document.getElementById("apiError");
+      var count   = document.getElementById("apiCount");
+
+      // Show loading
+      grid.innerHTML = "";
+      error.style.display  = "none";
+      count.style.display  = "none";
+      loading.style.display = "block";
+
+      // iTunes Search API URL
+      var url = "https://itunes.apple.com/search?term=" + encodeURIComponent(query) + "&entity=song&limit=12&media=music";
+
+      fetch(url)
+        .then(function(response) { return response.json(); })
+        .then(function(data) {
+          loading.style.display = "none";
+
+          if (!data.results || data.results.length === 0) {
+            error.style.display = "block";
+            return;
+          }
+
+          // Save to localStorage
+          localStorage.setItem("tsLastSearch", JSON.stringify({ query: query, count: data.resultCount, time: new Date().toLocaleString() }));
+
+          // Render song cards
+          data.results.forEach(function(song) {
+            var col = document.createElement("div");
+            col.className = "col-6 col-sm-4 col-md-3 col-lg-2";
+            col.innerHTML =
+              '<div class="ts-song-card">' +
+                '<img src="' + song.artworkUrl100 + '" alt="' + song.trackName + '" />' +
+                '<div class="ts-song-info">' +
+                  '<h4>' + song.trackName + '</h4>' +
+                  '<p>' + song.collectionName + '</p>' +
+                  '<span class="ts-song-price">' + (song.trackPrice > 0 ? "₹" + Math.round(song.trackPrice * 83) : "Free") + '</span>' +
+                  '<a href="' + song.previewUrl + '" target="_blank" class="btn ts-btn-pink btn-sm w-100 mt-2">' +
+                    '<i class="fa fa-play me-1"></i>Preview' +
+                  '</a>' +
+                '</div>' +
+              '</div>';
+            grid.appendChild(col);
+          });
+
+          // Show count
+          count.style.display = "block";
+          count.textContent = "✦ " + data.results.length + " songs found for \"" + query + "\" via iTunes API ✦";
+        })
+        .catch(function() {
+          loading.style.display = "none";
+          error.style.display   = "block";
+        });
+    }
+
+    // Auto load on page ready
+    window.addEventListener("DOMContentLoaded", function() {
+      fetchSongs();
     });
