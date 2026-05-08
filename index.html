@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taylor Swift | Official Fan Page</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <!-- External CSS (Part 2) -->
+  
+  <!-- Part 3 Extra Styles -->
+  <link rel="stylesheet" href="taylor_final.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════
+       NAVBAR (Bootstrap + Dropdown)
+  ══════════════════════════════════ -->
+  <nav class="navbar navbar-expand-lg fixed-top ts-navbar" id="tsNav">
+    <div class="container-fluid px-3 px-lg-5">
+
+      <!-- Brand -->
+      <a class="navbar-brand ts-brand" href="#">
+        <span class="brand-icon">♡</span>
+        <span>Taylor <em>Swift</em></span>
+      </a>
+
+      <!-- Toggler -->
+      <button class="navbar-toggler ts-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#tsNavMenu">
+        <i class="fa fa-music"></i>
+      </button>
+
+      <!-- Links -->
+      <div class="collapse navbar-collapse" id="tsNavMenu">
+        <ul class="navbar-nav mx-auto gap-lg-1">
+
+          <!-- Dropdown: Music -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle ts-nav-link" href="#" data-bs-toggle="dropdown">
+              <i class="fa fa-music me-1"></i>Music
+            </a>
+            <ul class="dropdown-menu ts-dropdown">
+              <li><a class="dropdown-item" href="#audio"><i class="fa fa-headphones me-2"></i>Latest Song</a></li>
+              <li><a class="dropdown-item" href="#discography"><i class="fa fa-compact-disc me-2"></i>Discography</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#lyricsModal"><i class="fa fa-scroll me-2"></i>Song Lyrics</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="ts-nav-link nav-link" href="#concerts"><i class="fa fa-calendar me-1"></i>Concerts</a></li>
+          <li class="nav-item"><a class="ts-nav-link nav-link" href="#discography"><i class="fa fa-record-vinyl me-1"></i>Albums</a></li>
+          <li class="nav-item"><a class="ts-nav-link nav-link" href="#merch"><i class="fa fa-bag-shopping me-1"></i>Merch</a></li>
+          <li class="nav-item"><a class="ts-nav-link nav-link" href="#fanclub"><i class="fa fa-heart me-1"></i>Fan Club</a></li>
+
+          <!-- Dropdown: More -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle ts-nav-link" href="#" data-bs-toggle="dropdown">More</a>
+            <ul class="dropdown-menu ts-dropdown">
+              <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#aboutModal"><i class="fa fa-star me-2"></i>About Taylor</a></li>
+              <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#contactModal"><i class="fa fa-envelope me-2"></i>Contact</a></li>
+              <li><a class="dropdown-item" href="#faq"><i class="fa fa-circle-question me-2"></i>FAQ</a></li>
+            </ul>
+          </li>
+
+        </ul>
+
+        <div class="d-flex gap-2 mt-3 mt-lg-0">
+          <span id="welcomeBack" class="welcome-tip" style="display:none"></span>
+          <button class="btn ts-btn-outline btn-sm px-3"
+                  data-bs-toggle="modal" data-bs-target="#loginModal">
+            <i class="fa fa-user me-1"></i>Login
+          </button>
+          <button class="btn ts-btn-pink btn-sm px-3"
+                  data-bs-toggle="modal" data-bs-target="#ticketModal">
+            <i class="fa fa-ticket me-1"></i>Get Tickets
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════
+       HERO SECTION
+  ══════════════════════════════════ -->
+  <div class="ts-hero" id="home">
+    <div class="ts-hero-overlay"></div>
+    <div class="container ts-hero-content">
+
+      <!-- Bootstrap BREADCRUMB -->
+      <nav aria-label="breadcrumb" class="ts-breadcrumb-nav mb-3">
+        <ol class="breadcrumb ts-breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item"><a href="#">Artists</a></li>
+          <li class="breadcrumb-item active">Taylor Swift</li>
+        </ol>
+      </nav>
+
+      <p class="ts-hero-sub">Official Fan Page</p>
+      <h1 class="ts-hero-title">Taylor<br /><em>Swift</em></h1>
+      <p class="ts-hero-quote">"You are what you love."</p>
+
+      <div class="d-flex flex-wrap gap-3 mt-4">
+        <a href="#audio" class="btn ts-btn-pink px-4 py-2">
+          <i class="fa fa-play me-2"></i>Listen Now
+        </a>
+        <a href="#concerts" class="btn ts-btn-outline px-4 py-2">
+          <i class="fa fa-calendar me-2"></i>Tour Dates
+        </a>
+        <button class="btn ts-btn-ghost px-4 py-2"
+                data-bs-toggle="modal" data-bs-target="#ticketModal">
+          <i class="fa fa-ticket me-2"></i>Get Tickets
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ALERT RIBBON -->
+  <div class="ts-alert-ribbon">
+    <div class="alert ts-alert mb-0 d-flex align-items-center justify-content-between px-4 py-2" role="alert">
+      <span><i class="fa fa-star me-2 text-warning"></i><strong>The Eras Tour 2026</strong> — India dates just announced! Limited tickets available.</span>
+      <button type="button" class="btn-close btn-close-white btn-sm" data-bs-dismiss="alert"></button>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       STATS ROW
+  ══════════════════════════════════ -->
+  <section class="py-5 ts-stats-section">
+    <div class="container">
+      <div class="row g-3 text-center">
+        <div class="col-6 col-md-3">
+          <div class="ts-stat-card">
+            <div class="ts-stat-num">11</div>
+            <div class="ts-stat-label">Studio Albums</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="ts-stat-card">
+            <div class="ts-stat-num">14</div>
+            <div class="ts-stat-label">Grammy Awards</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="ts-stat-card">
+            <div class="ts-stat-num">200M+</div>
+            <div class="ts-stat-label">Global Fans</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="ts-stat-card">
+            <div class="ts-stat-num">₹2B+</div>
+            <div class="ts-stat-label">Tour Revenue</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       AUDIO SECTION
+  ══════════════════════════════════ -->
+  <section class="py-5" id="audio">
+    <div class="container">
+      <nav aria-label="audio-breadcrumb" class="mb-3">
+        <ol class="breadcrumb ts-breadcrumb-section">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item active">Latest Song</li>
+        </ol>
+      </nav>
+      <div class="row align-items-center g-5">
+        <div class="col-12 col-lg-6 text-center text-lg-start">
+          <h2 class="ts-section-title">Listen to Our <em>Latest Song</em></h2>
+          <p class="ts-section-desc">Experience the magic of Taylor's newest release. Close your eyes and let the music take you somewhere beautiful.</p>
+          <div class="ts-audio-box mt-4">
+            <div class="ts-audio-label"><i class="fa fa-music me-2"></i>Now Playing</div>
+            <audio controls class="ts-audio">
+              <source src="photos/song.mp3" type="audio/mpeg" />
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+          <button class="btn ts-btn-pink mt-3"
+                  data-bs-toggle="modal" data-bs-target="#lyricsModal">
+            <i class="fa fa-scroll me-2"></i>View Lyrics
+          </button>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="ts-now-playing-card">
+            <div class="ts-vinyl-wrap">
+              <div class="ts-vinyl">
+                <div class="ts-vinyl-inner"></div>
+              </div>
+            </div>
+            <div class="ts-track-info">
+              <h4>Anti-Hero</h4>
+              <p>Midnights · 2022</p>
+              <div class="ts-track-tags">
+                <span class="ts-tag">Pop</span>
+                <span class="ts-tag">Synth-pop</span>
+                <span class="ts-tag">Alternative</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       UPCOMING CONCERTS
+  ══════════════════════════════════ -->
+  <section class="py-5 ts-dark-section" id="concerts">
+    <div class="container">
+      <nav aria-label="concerts-breadcrumb" class="mb-3">
+        <ol class="breadcrumb ts-breadcrumb-section">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item active">Upcoming Concerts</li>
+        </ol>
+      </nav>
+      <h2 class="ts-section-title text-center">Upcoming <em>Concerts</em></h2>
+
+      <!-- Bootstrap responsive grid for tables -->
+      <div class="row justify-content-center g-4 mt-2">
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="ts-concert-card">
+            <div class="ts-concert-header">Jan – Jun 2026</div>
+            <table class="table ts-table">
+              <thead><tr><th>Date</th><th>City</th><th></th></tr></thead>
+              <tbody>
+                <tr><td>10 Jan</td><td>Mumbai</td><td><span class="ts-badge">Hot</span></td></tr>
+                <tr><td>15 Mar</td><td>Pune</td><td></td></tr>
+                <tr><td>20 Jun</td><td>Delhi</td><td><span class="ts-badge">Few Left</span></td></tr>
+              </tbody>
+            </table>
+            <button class="btn ts-btn-pink btn-sm w-100 mt-2"
+                    data-bs-toggle="modal" data-bs-target="#ticketModal">
+              Book Tickets
+            </button>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="ts-concert-card">
+            <div class="ts-concert-header">Jul – Dec 2026</div>
+            <table class="table ts-table">
+              <thead><tr><th>Date</th><th>City</th><th></th></tr></thead>
+              <tbody>
+                <tr><td>05 Jul</td><td>Bangalore</td><td></td></tr>
+                <tr><td>18 Sep</td><td>Hyderabad</td><td><span class="ts-badge">Hot</span></td></tr>
+                <tr><td>25 Dec</td><td>Chennai</td><td></td></tr>
+              </tbody>
+            </table>
+            <button class="btn ts-btn-pink btn-sm w-100 mt-2"
+                    data-bs-toggle="modal" data-bs-target="#ticketModal">
+              Book Tickets
+            </button>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="ts-concert-card">
+            <div class="ts-concert-header">Jan – Jun 2027</div>
+            <table class="table ts-table">
+              <thead><tr><th>Date</th><th>City</th><th></th></tr></thead>
+              <tbody>
+                <tr><td>12 Jan</td><td>Kolkata</td><td></td></tr>
+                <tr><td>22 Mar</td><td>Ahmedabad</td><td></td></tr>
+                <tr><td>10 Jun</td><td>Jaipur</td><td><span class="ts-badge">New</span></td></tr>
+              </tbody>
+            </table>
+            <button class="btn ts-btn-pink btn-sm w-100 mt-2"
+                    data-bs-toggle="modal" data-bs-target="#ticketModal">
+              Book Tickets
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       DISCOGRAPHY
+  ══════════════════════════════════ -->
+  <section class="py-5" id="discography">
+    <div class="container">
+      <h2 class="ts-section-title text-center">Discography</h2>
+      <div class="row justify-content-center g-3 mt-2">
+
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="ts-album-card">
+            <img src="photos/elitaylor.jpeg" alt="Elizabeth Taylor" />
+            <h3>Elizabeth Taylor</h3><p>2022</p>
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="ts-album-card">
+            <img src="photos/lover.jpeg" alt="Lover" />
+            <h3>Lover</h3><p>2024</p>
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="ts-album-card">
+            <img src="photos/anthology.jpeg" alt="The Anthology" />
+            <h3>The Anthology</h3><p>2021</p>
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="ts-album-card">
+            <img src="photos/1989.jpeg" alt="1989" />
+            <h3>1989</h3><p>2023</p>
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="ts-album-card">
+            <img src="photos/speaknow.jpeg" alt="Speak Now" />
+            <h3>Speak Now</h3><p>2020</p>
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="ts-album-card">
+            <img src="photos/midnight.jpeg" alt="Midnights" />
+            <h3>Midnights</h3><p>2019</p>
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="ts-album-card">
+            <img src="photos/red.jpeg" alt="Red" />
+            <h3>Red</h3><p>2025</p>
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="ts-album-card">
+            <img src="photos/fearless.jpeg" alt="Fearless" />
+            <h3>Fearless</h3><p>2018</p>
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="ts-album-card">
+            <img src="photos/evermore.jpeg" alt="Evermore" />
+            <h3>Evermore</h3><p>2026</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       MERCH STORE
+  ══════════════════════════════════ -->
+  <section class="py-5 ts-dark-section" id="merch">
+    <div class="container">
+      <nav aria-label="merch-breadcrumb" class="mb-3">
+        <ol class="breadcrumb ts-breadcrumb-section">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item active">Merch Store</li>
+        </ol>
+      </nav>
+      <h2 class="ts-section-title text-center">Merch <em>Store</em></h2>
+      <p class="text-center ts-section-desc mb-4">Official Taylor Swift merchandise — wear your era proudly</p>
+
+      <!-- Bootstrap responsive merch grid -->
+      <div class="row justify-content-center g-3">
+
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="ts-merch-card">
+            <img src="photos/tshirt.jpg" alt="T-Shirt" />
+            <h3>T-Shirt</h3><p>₹999</p>
+            <button class="btn ts-btn-pink btn-sm w-100 mt-2">Add to Cart</button>
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="ts-merch-card">
+            <img src="photos/hoodie.jpg" alt="Hoodie" />
+            <h3>Hoodie</h3><p>₹1499</p>
+            <button class="btn ts-btn-pink btn-sm w-100 mt-2">Add to Cart</button>
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="ts-merch-card">
+            <img src="photos/cap.jpg" alt="Cap" />
+            <h3>Cap</h3><p>₹499</p>
+            <button class="btn ts-btn-pink btn-sm w-100 mt-2">Add to Cart</button>
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="ts-merch-card">
+            <img src="photos/cd.jpg" alt="Album CD" />
+            <h3>Album CD</h3><p>₹299</p>
+            <button class="btn ts-btn-pink btn-sm w-100 mt-2">Add to Cart</button>
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="ts-merch-card">
+            <img src="photos/poster.jpg" alt="Poster" />
+            <h3>Poster</h3><p>₹199</p>
+            <button class="btn ts-btn-pink btn-sm w-100 mt-2">Add to Cart</button>
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="ts-merch-card">
+            <img src="photos/band.jpg" alt="Wrist Band" />
+            <h3>Wrist Band</h3><p>₹149</p>
+            <button class="btn ts-btn-pink btn-sm w-100 mt-2">Add to Cart</button>
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="ts-merch-card">
+            <img src="photos/keychain.jpg" alt="Keychain" />
+            <h3>Keychain</h3><p>₹99</p>
+            <button class="btn ts-btn-pink btn-sm w-100 mt-2">Add to Cart</button>
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="ts-merch-card">
+            <img src="photos/sticker.jpg" alt="Sticker Pack" />
+            <h3>Sticker Pack</h3><p>₹79</p>
+            <button class="btn ts-btn-pink btn-sm w-100 mt-2">Add to Cart</button>
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="ts-merch-card">
+            <img src="photos/bag.jpg" alt="Backpack" />
+            <h3>Backpack</h3><p>₹1299</p>
+            <button class="btn ts-btn-pink btn-sm w-100 mt-2">Add to Cart</button>
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="ts-merch-card">
+            <img src="photos/lightstick.jpg" alt="Lightstick" />
+            <h3>Lightstick</h3><p>₹999</p>
+            <button class="btn ts-btn-pink btn-sm w-100 mt-2">Add to Cart</button>
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="ts-merch-card">
+            <img src="photos/totebag.jpg" alt="Tote Bag" />
+            <h3>Tote Bag</h3><p>₹1499</p>
+            <button class="btn ts-btn-pink btn-sm w-100 mt-2">Add to Cart</button>
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="ts-merch-card">
+            <img src="photos/phonecase.webp" alt="Phone Case" />
+            <h3>Phone Case</h3><p>₹499</p>
+            <button class="btn ts-btn-pink btn-sm w-100 mt-2">Add to Cart</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       FAN CLUB JOIN FORM
+  ══════════════════════════════════ -->
+  <section class="py-5" id="fanclub">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-8">
+          <div class="ts-fanclub-box text-center">
+            <span class="ts-era-badge">Join the Swifties</span>
+            <h2 class="ts-section-title mt-3">Fan Club <em>Registration</em></h2>
+            <p class="ts-section-desc mb-4">Get exclusive updates, early ticket access and special surprises</p>
+
+            <!-- Bootstrap FORM -->
+            <div class="row g-3 text-start">
+              <div class="col-12 col-sm-6">
+                <label class="ts-form-label">Your Name</label>
+                <input type="text" class="form-control ts-input" id="fanName" placeholder="Enter your name" />
+              </div>
+              <div class="col-12 col-sm-6">
+                <label class="ts-form-label">Email Address</label>
+                <input type="email" class="form-control ts-input" id="fanEmail" placeholder="your@email.com" />
+              </div>
+              <div class="col-12 col-sm-6">
+                <label class="ts-form-label">Favourite Era</label>
+                <select class="form-select ts-input" id="fanEra">
+                  <option value="">-- Choose your Era --</option>
+                  <option>Taylor Swift (Debut)</option>
+                  <option>Fearless Era</option>
+                  <option>Speak Now Era</option>
+                  <option>Red Era</option>
+                  <option>1989 Era</option>
+                  <option>Reputation Era</option>
+                  <option>Lover Era</option>
+                  <option>Folklore Era</option>
+                  <option>Evermore Era</option>
+                  <option>Midnights Era</option>
+                </select>
+              </div>
+              <div class="col-12 col-sm-6">
+                <label class="ts-form-label">City</label>
+                <input type="text" class="form-control ts-input" id="fanCity" placeholder="Your city" />
+              </div>
+              <div class="col-12">
+                <label class="ts-form-label">How long have you been a Swiftie?</label>
+                <div class="d-flex flex-wrap gap-3 mt-1">
+                  <div class="form-check">
+                    <input class="form-check-input ts-radio" type="radio" name="swiftieAge" id="new" value="New Swiftie" checked />
+                    <label class="form-check-label ts-check-label" for="new">New Swiftie</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input ts-radio" type="radio" name="swiftieAge" id="few" value="A few years" />
+                    <label class="form-check-label ts-check-label" for="few">A few years</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input ts-radio" type="radio" name="swiftieAge" id="decade" value="Since the beginning" />
+                    <label class="form-check-label ts-check-label" for="decade">Since the beginning</label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input ts-check" type="checkbox" id="agreeNews" />
+                  <label class="form-check-label ts-check-label" for="agreeNews">
+                    I want to receive Taylor Swift news and updates
+                  </label>
+                </div>
+                <div class="form-check mt-1">
+                  <input class="form-check-input ts-check" type="checkbox" id="agreeTC" />
+                  <label class="form-check-label ts-check-label" for="agreeTC">
+                    I agree to the
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#tcModal" class="ts-link">Terms & Conditions</a>
+                  </label>
+                </div>
+              </div>
+              <div class="col-12 text-center mt-2">
+                <button class="btn ts-btn-pink px-5 py-2">
+                  <i class="fa fa-heart me-2"></i>Join the Swifties!
+                </button>
+                <div id="fanClubMsg" class="mt-3" style="display:none"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       FAQ ACCORDION
+  ══════════════════════════════════ -->
+  <section class="py-5 ts-dark-section" id="faq">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-8">
+          <h2 class="ts-section-title text-center">Frequently Asked <em>Questions</em></h2>
+          <div class="accordion ts-accordion mt-4" id="faqAcc">
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                  When is Taylor Swift's next India tour?
+                </button>
+              </h2>
+              <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+                <div class="accordion-body">
+                  The Eras Tour India dates for 2026 include Mumbai (Jan 10), Pune (Mar 15), Delhi (Jun 20), Bangalore (Jul 5), Hyderabad (Sep 18), and Chennai (Dec 25). More cities will be announced soon!
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                  How do I buy tickets?
+                </button>
+              </h2>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+                <div class="accordion-body">
+                  Click any "Book Tickets" or "Get Tickets" button on this page. Fan Club members get early access 48 hours before general sale. Make sure to register your Fan Club account!
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                  What is the Fan Club membership?
+                </button>
+              </h2>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+                <div class="accordion-body">
+                  Fan Club membership is completely free! You get early ticket access, exclusive newsletters, surprise merchandise drops, and direct updates from Taylor's team.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                  How do I track my merch order?
+                </button>
+              </h2>
+              <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+                <div class="accordion-body">
+                  After placing an order you will receive a confirmation email with a tracking number. Delivery takes 5–7 business days within India.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       FOOTER
+  ══════════════════════════════════ -->
+  <footer class="ts-footer">
+    <div class="container py-5 text-center">
+      <div class="ts-footer-brand mb-4">
+        <span class="brand-icon">♡</span> Taylor Swift
+      </div>
+
+      <p class="ts-footer-copy mb-3">© 2026 Taylor Swift. All Rights Reserved.</p>
+
+      <p class="ts-footer-label mb-2">Follow Along</p>
+      <div class="ts-social-icons mb-4">
+        <a href="#" class="ts-social ts-instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="ts-social ts-twitter" title="X / Twitter"><i class="fab fa-x-twitter"></i></a>
+        <a href="#" class="ts-social ts-facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="ts-social ts-youtube" title="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="ts-social ts-tiktok" title="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="#" class="ts-social ts-spotify" title="Spotify"><i class="fab fa-spotify"></i></a>
+      </div>
+
+      <p class="ts-footer-label mb-2">Language</p>
+      <select class="ts-lang-select mb-4">
+        <option>English</option>
+        <option>Hindi</option>
+        <option>Tamil</option>
+        <option>Telugu</option>
+      </select>
+
+      <div class="ts-footer-links mb-3">
+        <a href="#" data-bs-toggle="modal" data-bs-target="#tcModal">Terms of Use</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal">Contact</a>
+        <a href="#">Careers</a>
+        <a href="#">Accessibility</a>
+      </div>
+
+      <div class="ts-footer-buttons">
+        <a href="#" class="ts-footer-btn">Powered By Swifties</a>
+        <a href="#merch" class="ts-footer-btn">Official Merch</a>
+        <a href="#fanclub" class="ts-footer-btn">Fan Club</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ══════════════════════════════════
+       BOOTSTRAP MODALS
+  ══════════════════════════════════ -->
+
+  <!-- LOGIN MODAL -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content ts-modal">
+        <div class="modal-header">
+          <h5 class="modal-title"><i class="fa fa-heart me-2"></i>Swiftie Login</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label class="ts-form-label">Email</label>
+            <input type="email" class="form-control ts-input" id="loginEmail" placeholder="your@email.com" />
+          </div>
+          <div class="mb-3">
+            <label class="ts-form-label">Password</label>
+            <input type="password" class="form-control ts-input" id="loginPass" placeholder="••••••••" />
+          </div>
+          <div class="form-check mb-3">
+            <input class="form-check-input ts-check" type="checkbox" id="rememberMe" />
+            <label class="form-check-label ts-check-label" for="rememberMe">Remember me</label>
+          </div>
+          <button class="btn ts-btn-pink w-100">
+            <i class="fa fa-heart me-2"></i>Enter the Eras
+          </button>
+          <div id="loginMsg" class="mt-3 text-center" style="display:none"></div>
+        </div>
+        <div class="modal-footer justify-content-center">
+          <a href="#" class="ts-modal-link">Forgot Password?</a>
+          <span class="text-muted mx-2">|</span>
+          <a href="#fanclub" class="ts-modal-link" data-bs-dismiss="modal">Create Account</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TICKET MODAL -->
+  <div class="modal fade" id="ticketModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content ts-modal">
+        <div class="modal-header">
+          <h5 class="modal-title"><i class="fa fa-ticket me-2 text-warning"></i>Book Concert Tickets</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-4">
+            <div class="col-12 col-md-6">
+              <label class="ts-form-label">Select City</label>
+              <select class="form-select ts-input" id="ticketCity">
+                <option value="">-- Choose City --</option>
+                <option>Mumbai – 10 Jan 2026</option>
+                <option>Pune – 15 Mar 2026</option>
+                <option>Delhi – 20 Jun 2026</option>
+                <option>Bangalore – 05 Jul 2026</option>
+                <option>Hyderabad – 18 Sep 2026</option>
+                <option>Chennai – 25 Dec 2026</option>
+                <option>Kolkata – 12 Jan 2027</option>
+                <option>Ahmedabad – 22 Mar 2027</option>
+                <option>Jaipur – 10 Jun 2027</option>
+              </select>
+            </div>
+            <div class="col-12 col-md-6">
+              <label class="ts-form-label">Ticket Category</label>
+              <select class="form-select ts-input" id="ticketCat">
+                <option>General Standing – ₹3,999</option>
+                <option>Silver – ₹6,999</option>
+                <option>Gold – ₹12,999</option>
+                <option>Platinum VIP – ₹24,999</option>
+              </select>
+            </div>
+            <div class="col-12 col-md-6">
+              <label class="ts-form-label">Number of Tickets</label>
+              <select class="form-select ts-input" id="ticketQty">
+                <option>1</option><option>2</option><option>3</option><option>4</option>
+              </select>
+            </div>
+            <div class="col-12 col-md-6">
+              <label class="ts-form-label">Your Email</label>
+              <input type="email" class="form-control ts-input" id="ticketEmail" placeholder="your@email.com" />
+            </div>
+          </div>
+          <div id="ticketMsg" class="mt-3 text-center" style="display:none"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn ts-btn-pink px-4">
+            <i class="fa fa-ticket me-2"></i>Book Now
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ALBUM DETAILS MODAL -->
+  <div class="modal fade" id="albumModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content ts-modal">
+        <div class="modal-header">
+          <h5 class="modal-title" id="albumModalTitle"><i class="fa fa-compact-disc me-2"></i>Album Details</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body text-center">
+          <img id="albumModalImg" src="" alt="" style="width:160px;height:160px;object-fit:cover;border-radius:12px;margin-bottom:16px" />
+          <h4 id="albumModalName" class="ts-modal-album-name"></h4>
+          <p id="albumModalYear" class="text-muted mb-3"></p>
+          <p class="ts-modal-desc">A beautifully crafted album that defined an era. Taylor Swift poured her heart into every track, creating a timeless masterpiece that resonates with millions of Swifties around the world.</p>
+          <button class="btn ts-btn-pink mt-2">
+            <i class="fab fa-spotify me-2"></i>Listen on Spotify
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LYRICS MODAL -->
+  <div class="modal fade" id="lyricsModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content ts-modal">
+        <div class="modal-header">
+          <h5 class="modal-title"><i class="fa fa-scroll me-2 text-warning"></i>Anti-Hero — Lyrics</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body ts-lyrics-body">
+          <p class="ts-lyrics-note">From the album <em>Midnights</em> (2022)</p>
+          <div class="ts-lyrics-text">
+            <p>I have this thing where I get older but just never wiser<br />
+            Midnights become my afternoons<br />
+            When my depression works the graveyard shift<br />
+            All of the people I've ghosted stand there in the room</p>
+            <p>I should not be left to my own devices<br />
+            They come with prices and vices<br />
+            I end up in crisis<br />
+            Tale as old as time</p>
+            <p class="ts-chorus">It's me, hi, I'm the problem, it's me<br />
+            At teatime, everybody agrees<br />
+            I'll stare directly at the sun but never in the mirror<br />
+            It must be exhausting always rooting for the anti-hero</p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn ts-btn-pink" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT MODAL -->
+  <div class="modal fade" id="aboutModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+      <div class="modal-content ts-modal">
+        <div class="modal-header">
+          <h5 class="modal-title"><i class="fa fa-star me-2 text-warning"></i>About Taylor Swift</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <h6 class="ts-modal-heading">Early Life</h6>
+          <p class="ts-modal-text">Taylor Alison Swift was born on December 13, 1989, in West Reading, Pennsylvania. She showed an early passion for musical theatre and performing arts, moving to Nashville at 14 to pursue a career in country music.</p>
+          <h6 class="ts-modal-heading mt-4">Career</h6>
+          <p class="ts-modal-text">Taylor signed with Big Machine Records at age 14, becoming one of the youngest artists to sign with a major Nashville label. Her self-titled debut album (2006) launched her into stardom. She has since released 11 studio albums, each defining a distinct artistic era.</p>
+          <h6 class="ts-modal-heading mt-4">Awards & Recognition</h6>
+          <p class="ts-modal-text">Taylor has won 14 Grammy Awards including four Album of the Year awards — the most by any artist in history. She is also the first artist to win the Grammy for Album of the Year four times.</p>
+          <h6 class="ts-modal-heading mt-4">The Eras Tour</h6>
+          <p class="ts-modal-text">The Eras Tour (2023–2024) became the highest-grossing concert tour in history, generating over $1 billion in revenue and breaking countless records worldwide.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn ts-btn-pink" data-bs-dismiss="modal">Amazing!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT MODAL -->
+  <div class="modal fade" id="contactModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content ts-modal">
+        <div class="modal-header">
+          <h5 class="modal-title"><i class="fa fa-envelope me-2"></i>Contact Us</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label class="ts-form-label">Your Name</label>
+            <input type="text" class="form-control ts-input" id="contactName" placeholder="Your name" />
+          </div>
+          <div class="mb-3">
+            <label class="ts-form-label">Email</label>
+            <input type="email" class="form-control ts-input" id="contactEmail" placeholder="your@email.com" />
+          </div>
+          <div class="mb-3">
+            <label class="ts-form-label">Subject</label>
+            <select class="form-select ts-input">
+              <option>General Enquiry</option>
+              <option>Merch Order Issue</option>
+              <option>Ticket Support</option>
+              <option>Fan Club Help</option>
+              <option>Press / Media</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label class="ts-form-label">Message</label>
+            <textarea class="form-control ts-input" rows="4" id="contactMsg" placeholder="Your message..."></textarea>
+          </div>
+          <div id="contactSuccess" style="display:none"></div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button class="btn ts-btn-pink">
+            <i class="fa fa-paper-plane me-2"></i>Send
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- T&C MODAL -->
+  <div class="modal fade" id="tcModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content ts-modal">
+        <div class="modal-header">
+          <h5 class="modal-title"><i class="fa fa-file-contract me-2"></i>Terms & Conditions</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <h6 class="ts-modal-heading">1. Fan Club Membership</h6>
+          <p class="ts-modal-text small">Membership is free and open to all Taylor Swift fans. By joining you agree to receive periodic updates and news about Taylor Swift events and releases.</p>
+          <h6 class="ts-modal-heading mt-3">2. Ticket Purchases</h6>
+          <p class="ts-modal-text small">All ticket sales are final. No refunds unless event is cancelled by the organizer. Tickets are non-transferable and may not be resold.</p>
+          <h6 class="ts-modal-heading mt-3">3. Merch Orders</h6>
+          <p class="ts-modal-text small">All merchandise is official and authentic. Exchanges accepted within 15 days of delivery for defective products only.</p>
+          <h6 class="ts-modal-heading mt-3">4. Privacy Policy</h6>
+          <p class="ts-modal-text small">We collect your name and email for membership purposes only. Your data is never sold to third parties.</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Decline</button>
+          <button class="btn ts-btn-pink" data-bs-dismiss="modal">Accept</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS (required for Navbar, Modal, Accordion, Dropdown to work) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  
+</body>
+</html>
