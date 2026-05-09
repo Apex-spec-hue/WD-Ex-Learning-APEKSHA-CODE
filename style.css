@@ -1,12 +1,4 @@
-/* ================================================
-   taylor_style.css — Taylor Swift Fan Page
-   Part 2: External CSS Stylesheet
-   ================================================ */
-
-/* ── GOOGLE FONTS ── */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;600;700&display=swap');
-
-/* ── ROOT VARIABLES ── */
 :root {
   --pink-deep:    #c2185b;
   --pink-mid:     #e91e8c;
@@ -22,17 +14,11 @@
   --font-body:    'Cormorant Garamond', Georgia, serif;
   --font-ui:      'Montserrat', sans-serif;
 }
-
-/* ── RESET ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-
-/* ── SCROLLBAR ── */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: #1a0010; }
 ::-webkit-scrollbar-thumb { background: var(--pink-deep); border-radius: 3px; }
-
-/* ── BODY ── */
 body {
   font-family: var(--font-body);
   color: var(--white);
@@ -46,14 +32,11 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
 }
-
-/* ── HEADER ── */
 .header {
   text-align: center;
   padding: 80px 20px 50px;
   position: relative;
 }
-
 .header h1 {
   font-family: var(--font-display);
   font-size: clamp(3rem, 10vw, 7rem);
@@ -68,7 +51,6 @@ body {
     0 0 80px rgba(255,105,180,0.3);
   animation: fadeInDown 1s ease both;
 }
-
 .header p {
   font-family: var(--font-ui);
   font-size: clamp(0.85rem, 2vw, 1.1rem);
@@ -80,7 +62,6 @@ body {
   text-shadow: 0 0 10px rgba(255,255,255,0.3);
   animation: fadeInUp 1s ease 0.3s both;
 }
-
 .quote {
   font-family: var(--font-display) !important;
   font-size: clamp(1rem, 2.5vw, 1.3rem) !important;
@@ -92,16 +73,12 @@ body {
   text-shadow: 0 0 12px rgba(255,255,255,0.35) !important;
   animation: fadeInUp 1s ease 0.6s both;
 }
-
-/* ── HR ── */
 hr {
   border: none;
   border-top: 1px solid rgba(255, 182, 193, 0.3);
   width: 80%;
   margin: 40px auto;
 }
-
-/* ── SECTIONS ── */
 .section {
   width: 88%;
   max-width: 1200px;
@@ -117,8 +94,6 @@ hr {
     0 8px 40px rgba(0,0,0,0.3),
     0 0 30px rgba(255,182,193,0.08);
 }
-
-/* ── HEADINGS ── */
 h2 {
   font-family: var(--font-display);
   font-size: clamp(1.8rem, 5vw, 2.8rem);
@@ -134,8 +109,6 @@ h2 {
   padding-bottom: 10px;
   letter-spacing: 1px;
 }
-
-/* ── AUDIO PLAYER ── */
 audio {
   margin-top: 20px;
   width: min(360px, 90%);
@@ -144,8 +117,6 @@ audio {
   box-shadow: 0 0 30px rgba(255,182,193,0.5);
   outline: none;
 }
-
-/* ── CONCERT TABLES ── */
 .concert-wrapper {
   display: flex;
   justify-content: center;
@@ -153,11 +124,9 @@ audio {
   flex-wrap: wrap;
   margin-top: 20px;
 }
-
 .concert-box {
   text-align: center;
 }
-
 .concert-box h3 {
   font-family: var(--font-ui);
   font-size: 0.9rem;
@@ -167,7 +136,6 @@ audio {
   color: var(--pink-mid);
   margin-bottom: 10px;
 }
-
 .concert-box table {
   border-collapse: collapse;
   width: 200px;
@@ -175,7 +143,6 @@ audio {
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0,0,0,0.3);
 }
-
 .concert-box th {
   background-color: var(--pink-deep);
   color: white;
@@ -186,7 +153,6 @@ audio {
   letter-spacing: 1px;
   text-transform: uppercase;
 }
-
 .concert-box td {
   padding: 9px;
   border: 1px solid #f48fb1;
@@ -196,12 +162,9 @@ audio {
   font-size: 0.85rem;
   transition: background 0.2s;
 }
-
 .concert-box tr:hover td {
   background-color: var(--pink-pale);
 }
-
-/* ── CARD GRID ── */
 .card-grid {
   display: flex;
   flex-wrap: wrap;
@@ -209,8 +172,6 @@ audio {
   gap: 20px;
   margin-top: 20px;
 }
-
-/* ── CARDS ── */
 .card {
   background: rgba(255, 255, 255, 0.10);
   backdrop-filter: blur(10px);
@@ -223,14 +184,12 @@ audio {
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   cursor: pointer;
 }
-
 .card:hover {
   transform: translateY(-12px) scale(1.04);
   box-shadow:
     0 20px 50px rgba(255,105,180,0.35),
     0 0 0 1px rgba(255,182,193,0.3);
 }
-
 .card img {
   border-radius: 10px;
   width: 150px;
@@ -238,12 +197,10 @@ audio {
   object-fit: cover;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
-
 .card:hover img {
   transform: scale(1.06);
   box-shadow: 0 0 20px rgba(255,192,203,0.7);
 }
-
 .card h3 {
   font-family: var(--font-ui);
   font-size: 0.85rem;
@@ -252,20 +209,15 @@ audio {
   margin: 10px 0 4px;
   letter-spacing: 0.5px;
 }
-
 .card p {
   font-family: var(--font-ui);
   font-size: 0.8rem;
   color: rgba(255,255,255,0.55);
   margin: 0;
 }
-
-/* ── MERCH IMAGE ── */
 .merch-img {
   height: 150px !important;
 }
-
-/* ── FOOTER ── */
 .footer {
   background: linear-gradient(135deg, #880e4f, #c2185b);
   color: var(--pink-pale);
@@ -276,12 +228,10 @@ audio {
   font-size: 0.85rem;
   letter-spacing: 0.5px;
 }
-
 .footer p {
   margin-top: 16px;
   color: rgba(255,230,242,0.7);
 }
-
 .footer-buttons {
   margin-top: 10px;
   display: flex;
@@ -289,7 +239,6 @@ audio {
   flex-wrap: wrap;
   gap: 10px;
 }
-
 .footer-buttons a {
   display: inline-block;
   background-color: rgba(255,255,255,0.12);
@@ -305,31 +254,24 @@ audio {
   text-transform: uppercase;
   transition: background 0.3s, color 0.3s, transform 0.2s;
 }
-
 .footer-buttons a:hover {
   background-color: white;
   color: var(--pink-deep);
   transform: scale(1.08);
 }
-
-/* ── ANIMATIONS ── */
 @keyframes fadeInDown {
   from { opacity: 0; transform: translateY(-30px); }
   to   { opacity: 1; transform: translateY(0); }
 }
-
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
 }
-
-/* ── RESPONSIVE ── */
 @media (max-width: 991px) {
   .section { width: 92%; padding: 30px 20px; }
   .card { width: 155px; }
   .card img { width: 130px; height: 155px; }
 }
-
 @media (max-width: 767px) {
   .header { padding: 60px 16px 40px; }
   .section { width: 95%; padding: 24px 16px; }
@@ -340,7 +282,6 @@ audio {
   .card h3 { font-size: 0.78rem; }
   audio { width: 90%; }
 }
-
 @media (max-width: 575px) {
   .header h1 { font-size: 2.8rem; }
   .card { width: 130px; }
@@ -349,12 +290,6 @@ audio {
   .concert-box th, .concert-box td { padding: 6px; font-size: 0.75rem; }
   .footer-buttons a { padding: 8px 14px; font-size: 0.75rem; }
 }
-/* ================================================
-   taylor_part3.css — Taylor Swift | Part 3 CSS
-   Bootstrap overrides + new component styles
-   ================================================ */
-
-/* ── NAVBAR ── */
 .ts-navbar {
   background: rgba(10, 0, 20, 0.85);
   backdrop-filter: blur(16px);
@@ -366,7 +301,6 @@ audio {
   background: rgba(10, 0, 20, 0.98);
   box-shadow: 0 4px 30px rgba(194, 24, 91, 0.2);
 }
-
 .ts-brand {
   font-family: 'Playfair Display', Georgia, serif;
   font-size: 1.3rem;
@@ -381,13 +315,11 @@ audio {
 }
 .ts-brand em { color: #f48fb1; font-style: italic; }
 .brand-icon { color: #e91e8c; font-size: 1.2rem; }
-
 .ts-toggler {
   border-color: rgba(255,182,193,0.4);
   color: #f48fb1;
   padding: 4px 10px;
 }
-
 .ts-nav-link {
   color: rgba(255,255,255,0.75) !important;
   font-family: 'Montserrat', sans-serif;
@@ -403,8 +335,6 @@ audio {
   color: #f48fb1 !important;
   background: rgba(255,182,193,0.1);
 }
-
-/* ── DROPDOWN ── */
 .ts-dropdown {
   background: rgba(15, 0, 25, 0.97);
   border: 1px solid rgba(255,182,193,0.2);
@@ -428,8 +358,6 @@ audio {
   color: #fff;
 }
 .ts-dropdown .dropdown-divider { border-color: rgba(255,255,255,0.08); }
-
-/* ── BUTTONS ── */
 .ts-btn-pink {
   background: linear-gradient(135deg, #c2185b, #e91e8c);
   border: none;
@@ -448,7 +376,6 @@ audio {
   transform: translateY(-2px);
   color: #fff;
 }
-
 .ts-btn-outline {
   background: transparent;
   border: 2px solid rgba(255,255,255,0.5);
@@ -466,7 +393,6 @@ audio {
   border-color: #fff;
   color: #fff;
 }
-
 .ts-btn-ghost {
   background: rgba(255,255,255,0.08);
   border: 1px solid rgba(255,255,255,0.2);
@@ -484,8 +410,6 @@ audio {
   border-color: #f48fb1;
   color: #fff;
 }
-
-/* ── WELCOME TIP ── */
 .welcome-tip {
   font-family: 'Montserrat', sans-serif;
   font-size: 0.75rem;
@@ -497,8 +421,6 @@ audio {
   background: rgba(255,182,193,0.08);
   letter-spacing: 0.5px;
 }
-
-/* ── HERO ── */
 .ts-hero {
   position: relative;
   min-height: 100vh;
@@ -528,8 +450,6 @@ audio {
   padding-top: 80px;
   padding-bottom: 60px;
 }
-
-/* ── HERO BREADCRUMB ── */
 .ts-breadcrumb-nav .breadcrumb {
   background: rgba(0,0,0,0.35);
   border: 1px solid rgba(255,255,255,0.12);
@@ -559,8 +479,6 @@ audio {
   color: rgba(255,255,255,0.3);
   content: "›";
 }
-
-/* ── SECTION BREADCRUMB ── */
 .ts-breadcrumb-section {
   background: rgba(255,255,255,0.04);
   border: 1px solid rgba(255,255,255,0.07);
@@ -580,8 +498,6 @@ audio {
   font-family: 'Montserrat', sans-serif;
   font-size: 0.72rem;
 }
-
-/* ── HERO TEXT ── */
 .ts-hero-sub {
   font-family: 'Montserrat', sans-serif;
   font-size: 0.8rem;
@@ -612,8 +528,6 @@ audio {
   margin-top: 16px;
   letter-spacing: 0.5px;
 }
-
-/* ── ALERT RIBBON ── */
 .ts-alert-ribbon { position: relative; z-index: 900; }
 .ts-alert {
   background: rgba(15, 0, 25, 0.95) !important;
@@ -624,8 +538,6 @@ audio {
   font-size: 0.82rem;
   border-radius: 0 !important;
 }
-
-/* ── STATS ── */
 .ts-stats-section { background: rgba(0,0,0,0.3); }
 .ts-stat-card {
   background: rgba(255,255,255,0.06);
@@ -655,8 +567,6 @@ audio {
   text-transform: uppercase;
   color: rgba(255,255,255,0.55);
 }
-
-/* ── SECTION TITLES ── */
 .ts-section-title {
   font-family: 'Playfair Display', Georgia, serif;
   font-size: clamp(1.6rem, 4vw, 2.5rem);
@@ -672,11 +582,7 @@ audio {
   color: rgba(255,255,255,0.6);
   line-height: 1.7;
 }
-
-/* ── DARK SECTIONS ── */
 .ts-dark-section { background: rgba(0,0,0,0.35); }
-
-/* ── AUDIO BOX ── */
 .ts-audio-box {
   background: rgba(255,255,255,0.05);
   border: 1px solid rgba(255,182,193,0.2);
@@ -698,8 +604,6 @@ audio {
   border-radius: 30px;
   box-shadow: 0 0 25px rgba(255,182,193,0.4);
 }
-
-/* ── NOW PLAYING CARD ── */
 .ts-now-playing-card {
   background: rgba(255,255,255,0.06);
   border: 1px solid rgba(255,182,193,0.2);
@@ -762,8 +666,6 @@ audio {
   border: 1px solid rgba(255,182,193,0.2);
   color: #f48fb1;
 }
-
-/* ── CONCERT CARDS ── */
 .ts-concert-card {
   background: rgba(255,255,255,0.06);
   border: 1px solid rgba(255,182,193,0.15);
@@ -815,8 +717,6 @@ audio {
   padding: 2px 7px;
   border-radius: 10px;
 }
-
-/* ── ALBUM CARDS ── */
 .ts-album-card {
   background: rgba(255,255,255,0.07);
   border: 1px solid rgba(255,255,255,0.1);
@@ -853,8 +753,6 @@ audio {
   color: rgba(255,255,255,0.4);
   margin: 0;
 }
-
-/* ── MERCH CARDS ── */
 .ts-merch-card {
   background: rgba(255,255,255,0.07);
   border: 1px solid rgba(255,255,255,0.1);
@@ -888,8 +786,6 @@ audio {
   color: rgba(255,255,255,0.6);
   margin-bottom: 6px;
 }
-
-/* ── FAN CLUB BOX ── */
 .ts-fanclub-box {
   background: rgba(255,255,255,0.05);
   border: 1px solid rgba(255,182,193,0.2);
@@ -907,8 +803,6 @@ audio {
   padding: 5px 18px;
   border-radius: 20px;
 }
-
-/* ── FORM INPUTS ── */
 .ts-form-label {
   font-family: 'Montserrat', sans-serif;
   font-size: 0.75rem;
@@ -946,8 +840,6 @@ audio {
   background-color: #e91e8c;
   border-color: #e91e8c;
 }
-
-/* ── ACCORDION ── */
 .ts-accordion .accordion-item {
   background: rgba(255,255,255,0.05);
   border: 1px solid rgba(255,182,193,0.1) !important;
@@ -980,8 +872,6 @@ audio {
   line-height: 1.7;
   padding: 16px 20px;
 }
-
-/* ── MODALS ── */
 .ts-modal {
   background: rgba(15, 0, 25, 0.98);
   border: 1px solid rgba(255,182,193,0.2);
@@ -1035,8 +925,6 @@ audio {
   color: rgba(255,255,255,0.65);
   line-height: 1.7;
 }
-
-/* ── LYRICS ── */
 .ts-lyrics-note {
   font-family: 'Montserrat', sans-serif;
   font-size: 0.72rem;
@@ -1057,8 +945,6 @@ audio {
   font-style: italic;
   font-size: 1.1rem !important;
 }
-
-/* ── FOOTER ── */
 .ts-footer {
   background: linear-gradient(180deg, #1a0010 0%, #0d000a 100%);
   border-top: 1px solid rgba(255,182,193,0.15);
@@ -1107,7 +993,6 @@ audio {
 .ts-social.ts-youtube:hover   { color: #ff0000; background: rgba(255,0,0,0.12); box-shadow: 0 0 16px rgba(255,0,0,0.4); border-color: #ff0000; }
 .ts-social.ts-tiktok:hover    { color: #69c9d0; background: rgba(105,201,208,0.12); box-shadow: 0 0 16px rgba(105,201,208,0.4); border-color: #69c9d0; }
 .ts-social.ts-spotify:hover   { color: #1db954; background: rgba(29,185,84,0.12); box-shadow: 0 0 16px rgba(29,185,84,0.4); border-color: #1db954; }
-
 .ts-lang-select {
   background: rgba(255,255,255,0.07);
   border: 1px solid rgba(255,255,255,0.15);
@@ -1121,7 +1006,6 @@ audio {
   margin: 0 auto;
 }
 .ts-lang-select option { background: #1a0010; }
-
 .ts-footer-links {
   display: flex;
   flex-wrap: wrap;
@@ -1140,7 +1024,6 @@ audio {
   transition: color 0.2s;
 }
 .ts-footer-links a:hover { color: #f48fb1; }
-
 .ts-footer-buttons {
   display: flex;
   justify-content: center;
@@ -1163,8 +1046,6 @@ audio {
   transition: all 0.25s ease;
 }
 .ts-footer-btn:hover { background: #c2185b; color: #fff; border-color: #c2185b; transform: scale(1.06); }
-
-/* ── SCROLL TO TOP ── */
 #tsTopBtn {
   display: none;
   position: fixed;
@@ -1186,8 +1067,6 @@ audio {
 }
 #tsTopBtn:hover { transform: scale(1.1); }
 #tsTopBtn.visible { display: flex; }
-
-/* ── TOAST ── */
 .ts-toast {
   position: fixed;
   bottom: 28px;
@@ -1207,8 +1086,6 @@ audio {
 }
 @keyframes toastIn  { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:translateY(0); } }
 @keyframes toastOut { from { opacity:1; } to { opacity:0; } }
-
-/* ── RESPONSIVE ── */
 @media (max-width: 991.98px) {
   .ts-hero { background-attachment: scroll; }
   #tsNavMenu { padding: 16px 0; }
@@ -1231,8 +1108,6 @@ audio {
   .ts-footer-btn { padding: 7px 14px; font-size: 0.68rem; }
   .ts-social { width: 36px; height: 36px; font-size: 0.85rem; }
 }
-
-/* ── iTunes API SECTION ── */
 .ts-spinner {
   width: 48px;
   height: 48px;
@@ -1242,7 +1117,6 @@ audio {
   animation: spin 0.9s linear infinite;
 }
 @keyframes spin { to { transform: rotate(360deg); } }
-
 .ts-song-card {
   background: rgba(255,255,255,0.07);
   border: 1px solid rgba(255,182,193,0.15);
